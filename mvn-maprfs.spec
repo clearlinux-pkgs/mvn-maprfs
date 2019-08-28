@@ -4,10 +4,11 @@
 #
 Name     : mvn-maprfs
 Version  : 1
-Release  : 1
+Release  : 2
 URL      : http://repository.mapr.com/maven/com/mapr/hadoop/maprfs/5.2.1-mapr/maprfs-5.2.1-mapr.jar
 Source0  : http://repository.mapr.com/maven/com/mapr/hadoop/maprfs/5.2.1-mapr/maprfs-5.2.1-mapr.jar
 Source1  : http://repository.mapr.com/maven/com/mapr/hadoop/maprfs/5.2.1-mapr/maprfs-5.2.1-mapr.pom
+Source2  : http://repository.mapr.com/maven/com/mapr/mapr-release/5.2.1-mapr/mapr-release-5.2.1-mapr.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -36,6 +37,9 @@ cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/com/mapr/hadoop/maprfs/
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/mapr/hadoop/maprfs/5.2.1-mapr
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/mapr/hadoop/maprfs/5.2.1-mapr/maprfs-5.2.1-mapr.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/mapr/mapr-release/5.2.1-mapr
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/mapr/mapr-release/5.2.1-mapr/mapr-release-5.2.1-mapr.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -44,3 +48,4 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/mapr/hadoop/maprfs/
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/com/mapr/hadoop/maprfs/5.2.1-mapr/maprfs-5.2.1-mapr.jar
 /usr/share/java/.m2/repository/com/mapr/hadoop/maprfs/5.2.1-mapr/maprfs-5.2.1-mapr.pom
+/usr/share/java/.m2/repository/com/mapr/mapr-release/5.2.1-mapr/mapr-release-5.2.1-mapr.pom
